@@ -1,12 +1,27 @@
 let express = require('express');
 let app = express();
+let dataFile = require('./data/data.json');
+
+app.set('port', process.env.PORT || 3000);
 
 app.get('/', function (req, res) {
-    res.send('<h1>Greg and his Projects</h1>');
+    let info = '';
+    dataFile.speakers.forEach(item => {
+        info += `
+            <li>
+                <h2>${item.name}</h2>
+                <p>${item.summary}</p>
+            </li>
+        `;
+    });
+    res.send(`
+        <h1>Greg and his Projects</h1>
+        ${info}
+    `);
 });
 
-let server = app.listen(3000, function () {
-    console.log('go to localhost:3000');
+let server = app.listen(app.get('port'), function () {
+    console.log('listing on port: ' + app.get('port') ) ;
 });
 
 

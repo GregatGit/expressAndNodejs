@@ -1,4 +1,5 @@
 let express = require('express');
+let reload = require('reload');
 let app = express();
 let dataFile = require('./data/data.json');
 
@@ -12,6 +13,8 @@ app.use(require('./routes/speakers'));
 let server = app.listen(app.get('port'), function () {
     console.log('listing on port: ' + app.get('port') ) ;
 });
+
+reload(server, app);
 
 
 // let http = require('http');

@@ -7,7 +7,9 @@ router.get('/', function (req, res) {
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <h1>Welcome to Greg's Projects</h1>
         <img src="/images/misc/background.jpg" alt="background" style="height: 300px;">
-        <p>Hi - this is a work in progress to show my Projects</p>
+        <p>Hi there- this is a work in progress to show my Projects</p>
+        <p>see if reload works</p>
+        <script src="/reload/reload.js></script>
     `);
 });
 

@@ -11,9 +11,10 @@
                 <% if (pageID === 'home'){ %>
                 <img class="speakerslist-img img-circle" src="/images/speakers/<%= item.shortname %>_tn.jpg" alt="Photo of <%= item.name %>"></a>
                 <% } %>
-                <% if (pageID === 'speakers'){ %>
+                <% if (pageID === 'speakersList'){ %>
                 <img class="speakerslist-img img-circle pull-left" src="/images/speakers/<%= item.shortname %>_tn.jpg" alt="Photo of <%= item.name %>"></a>
                 <% } %>
+                </a>
                 <% if (pageID !== 'home'){ %>
                 <%= item.summary %>
                 <% } %>
